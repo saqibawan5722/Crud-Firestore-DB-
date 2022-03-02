@@ -1,0 +1,25 @@
+<!-- THIS IS USE FOR READ AND DELETE -->
+
+<table class="table table-bordered">
+    <thead class="text-center">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Action </th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let user of Users; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.contact }}</td>
+        <td>
+          <a (click)="removeUser(user)" class="text-danger" style="cursor: pointer;"><i class="fa fa-trash" style="font-size:25px"></i></a> &nbsp;
+          <a routerLink="/update-user/{{user.id}}" class="text-primary" style="cursor: pointer;"><i class="fa fa-edit" style="font-size:25px"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

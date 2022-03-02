@@ -1,0 +1,14 @@
+.form{
+    padding: 20px;
+    margin: 80px;
+}
+
+
+.card{
+    box-shadow: 5px 5px 5px 5px;
+}
+
+.error{
+    color: brown;
+    text-align: center;
+}

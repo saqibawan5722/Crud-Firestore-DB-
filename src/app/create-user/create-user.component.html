@@ -1,0 +1,31 @@
+
+<div class="card bg-light">
+    <h1 class="text-center mt-5"> Add New User</h1>
+    <form class="form mt-3" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+
+        <div class="mb-3">
+          <label>Name</label>
+          <input type="text" formControlName="name" class="form-control" required>
+          <div class="error" *ngIf="f.name.invalid && f.name.touched"><p>This field is required</p></div>
+        </div>
+      
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="email" formControlName="email" class="form-control" required>
+          <div class="error" *ngIf="f.email.invalid && f.email.touched"><p>This field is required</p></div>
+        </div>
+      
+        <div class="mb-3">
+          <label>Contact</label>
+          <input type="text" formControlName="contact" class="form-control" required>
+          <div class="error" *ngIf="f.contact.invalid && f.contact.touched"><p>This field is required</p></div>
+        </div>
+      
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Create</button>
+        </div>
+      </form>
+    
+
+</div>
